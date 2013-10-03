@@ -14,9 +14,16 @@
     $(settings.headingSelectors.join(',')).each(function() {
       for (var i = 0; i < settings.headingSelectors.length; ++i) {
         if ($(this).is(settings.headingSelectors[i]) === true) {
+          // Make sure ID is set
+          if ($(this).attr('id') === undefined) {
+            $(this).attr('id', 'contentify_' + toc.length);
+          }
+
+          // Create new entry
           toc.push({
             title: $(this).html(),
-            level: i
+            level: i,
+            id:    $(this).attr('id') 
           });
         }
       }
@@ -30,7 +37,7 @@
         tocHTML += '<ol>';
       }
 
-      tocHTML += '<li><a href="">' + toc[i].title + '</a></li>';
+      tocHTML += '<li><a href="#' + toc[i].id + '">' + toc[i].title + '</a></li>';
 
       if (i === toc.length - 1 || toc[i].level > toc[i + 1].level) {
         tocHTML += '</ol>';
