@@ -38,16 +38,19 @@
         tocHTML += '<ol>';
       }
 
-      tocHTML += '<li><a href="#' + toc[i].id + '">' + toc[i].title + '</a></li>';
+      tocHTML += '<li class="contentify_' + toc[i].level + '">'
+              +    '<a href="#' + toc[i].id + '">'
+              +      toc[i].title
+              +    '</a>'
+              +  '</li>';
 
       if (i === toc.length - 1 || toc[i].level > toc[i + 1].level) {
         tocHTML += '</ol>';
       }
     }
 
-    // Insert table of contents HTML
     return this.each(function() {
-      $(this).html(tocHTML);
+      $(this).html(tocHTML); // Insert HTML
 
       // Add smooth scrolling
       $(this).find('a').click(function() {
@@ -56,6 +59,14 @@
         }, settings.scrollDuration);
 
         return false;
+      });
+
+      // Apply reasonable default CSS styling
+      $(this).find('ol').each(function() {
+        $(this).css({
+          'list-style': 'none',
+          'padding':    '0px'
+        });
       });
     });
   };
