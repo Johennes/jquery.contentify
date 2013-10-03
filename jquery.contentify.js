@@ -4,7 +4,8 @@
 
     // Initialze settings
     var settings = $.extend({
-      headingSelectors: ['h1', 'h2', 'h3', 'h4', 'h5']
+      headingSelectors: ['h1', 'h2', 'h3', 'h4', 'h5'],
+      scrollDuration:   1000
     }, options);
 
     // Initialize table of contents entries
@@ -47,6 +48,15 @@
     // Insert table of contents HTML
     return this.each(function() {
       $(this).html(tocHTML);
+
+      // Add smooth scrolling
+      $(this).find('a').click(function() {
+        $('html, body').animate({
+            scrollTop: $($(this).attr('href')).offset().top
+        }, settings.scrollDuration);
+
+        return false;
+      });
     });
   };
 
