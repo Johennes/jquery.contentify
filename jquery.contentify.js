@@ -35,10 +35,10 @@
 
     for (var i = 0; i < toc.length; ++i) {
       if (i === 0 || toc[i - 1].level < toc[i].level) {
-        tocHTML += '<ol>';
+        tocHTML += '<ol class="contentify_' + toc[i].level + '">';
       }
 
-      tocHTML += '<li class="contentify_' + toc[i].level + '">'
+      tocHTML += '<li>'
               +    '<a href="#' + toc[i].id + '">'
               +      toc[i].title
               +    '</a>'
