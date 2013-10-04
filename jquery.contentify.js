@@ -65,7 +65,8 @@
       $(this).find('ol').each(function() {
         $(this).css({
           'list-style': 'none',
-          'padding':    '0px'
+          'padding':    '0px',
+          'margin':     '0px'
         });
       });
 
