@@ -68,6 +68,13 @@
           'padding':    '0px'
         });
       });
+
+      $(this).find('a').each(function() {
+        $(this).css({
+          'text-decoration': 'none',
+          'color':           $(this).css('color')
+        });
+      });
     });
   };
 
