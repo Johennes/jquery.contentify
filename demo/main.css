@@ -1,11 +1,26 @@
+body {
+  font-family: Georgia;
+}
+
+#toc {
+  display:               inline-block;
+  border:                1px solid black;
+  border-radius:         5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius:    5px;
+  padding:               10px;
+}
+
 .contentify_0 {
   font-size: large;
 }
 
-.contentify_1 {
-  font-size: medium;
+.contentify_1 > li {
+  font-size:    medium;
+  padding-left: 1em;
 }
 
-.contentify_2 {
-  font-size: small;
+.contentify_2 > li {
+  font-size:    small;
+  padding-left: 2em;
 }
