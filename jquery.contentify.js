@@ -4,6 +4,7 @@
 
     // Initialze settings
     var settings = $.extend({
+      title:            '',
       headingSelectors: ['h1', 'h2', 'h3', 'h4', 'h5'],
       scrollDuration:   1000
     }, options);
@@ -31,7 +32,11 @@
     });
 
     // Generate table of contents HTML
-    var tocHTML  = '';
+    var tocHTML = '';
+
+    if (settings.title.length > 0) {
+      tocHTML += '<div class="contentify_title">' + settings.title + '</div>'
+    }
 
     for (var i = 0; i < toc.length; ++i) {
       if (i === 0 || toc[i - 1].level < toc[i].level) {
@@ -72,8 +77,7 @@
 
       $(this).find('a').each(function() {
         $(this).css({
-          'text-decoration': 'none',
-          'color':           $(this).css('color')
+          'color': $(this).css('color')
         });
       });
     });

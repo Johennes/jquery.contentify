@@ -11,6 +11,17 @@ body {
   padding:               10px;
 }
 
+#toc a {
+  text-decoration: none;
+  color:           grey;
+}
+
+.contentify_title {
+  font-weight:     bold;
+  text-decoration: underline;
+  margin-bottom:   10px;
+}
+
 .contentify_0 {
   font-size: large;
 }
