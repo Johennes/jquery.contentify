@@ -1,4 +1,4 @@
 jquery-contentify
 =================
 
-jQuery Plugin for Table of Contents Generation
+A jQuery plugin to generate a table of contents
