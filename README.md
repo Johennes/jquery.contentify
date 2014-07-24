@@ -38,3 +38,6 @@ level of the section.
 It would be nice to be able to specify an array of selectors for each
 level of headings.
 * The CSS class names of the table of contents cannot be customized
+* It is not possible to restrict the area of the document that should
+be scanned for headings. The whole document will be used to compile
+the table of contents.
