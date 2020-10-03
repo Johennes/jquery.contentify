@@ -1,7 +1,7 @@
 jquery.contentify
 =================
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+*Mirrors: [GitHub] ~ [GitLab]*
 
 A jQuery plugin to generate a table of contents
 
@@ -43,3 +43,6 @@ level of headings.
 * It is not possible to restrict the area of the document that should
 be scanned for headings. The whole document will be used to compile
 the table of contents.
+
+[GitHub]: https://github.com/Johennes/jquery.contentify
+[GitLab]: https://gitlab.com/cherrypicker/jquery-contentify
